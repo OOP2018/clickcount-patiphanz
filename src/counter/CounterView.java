@@ -16,7 +16,7 @@ import javafx.stage.Stage;
  * so write it in code instead of FXML.
  *
  */
-public class CounterView implements java.util.Observer {
+public class CounterView extends Stage implements java.util.Observer {
 	/** the stage (top-level window) for showing scene */
 	private Stage stage;
 	/** a counter to show value of */
@@ -34,7 +34,7 @@ public class CounterView implements java.util.Observer {
 	}
 	
 	private void initComponents() {
-		stage = new Stage();
+		stage = this;
 		// components and containers for our window
 		HBox root = new HBox();
 		//TODO Set some padding around the HBox
